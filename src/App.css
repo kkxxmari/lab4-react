@@ -1,0 +1,46 @@
+/* Stack the navigation, main content and footer over the full window height. */
+.page-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}/* Growing this section pushes the footer down when there is little content. */
+.page-content {
+  flex-grow: 1;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}/* Separate the page content from the background with a padded white panel. */
+.content-panel {
+  background: white;
+  border: 1px solid #e0e4e8;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}.page-footer {
+  padding: 1rem 0;
+  color: #5c636a;
+  background: white;
+  border-top: 1px solid #e0e4e8;
+}/* Let the available width determine how many movie cards fit on a row. */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 1.25rem;
+}/* Scale the poster down to fit its card while keeping its proportions. */
+.movie-poster {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Limit the form width so the fields remain easy to scan. */
+.movie-form {
+  max-width: 600px;
+}
+
+.missing-poster {
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
